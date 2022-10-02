@@ -6,7 +6,10 @@
   <h2>Get it!</h2>
 	<ul>
   <% tricks.forEach(trick => { %>
-    <li> <%= trick.name %> </li>
+    <li>
+      <a href="/tricks/<%= trick._id %>"> <%= trick.name %> 
+    </a> 
+  </li>
   <% }) %>
   </ul>
   

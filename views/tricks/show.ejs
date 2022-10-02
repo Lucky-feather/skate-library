@@ -1,0 +1,13 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section id="details">
+  
+  <h1><%= trick.name %></h1>
+  <h3><%= trick.description %> </h3>
+  
+</section>
+
+<p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
+
+<%- include('../partials/footer') %>

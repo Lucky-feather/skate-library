@@ -34,9 +34,25 @@ function create(req, res) {
     })
   }
 
+  function show(req, res) {
+    Trick.findById(req.params.id)
+    .populate('owner')
+    .then(trick => {
+      console.log(trick)
+      res.render('tricks/show', {
+        trick,
+        title: trick.name
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  }
 
 export {
   index,
   newTrick as new,
   create,
+  show,
 }

@@ -8,6 +8,8 @@ router.get('/', tricksCtrl.index)
 
 router.get('/new', tricksCtrl.new)
 
+router.get('/:id', tricksCtrl.show)
+
 router.post('/', tricksCtrl.create)
 
 export {
