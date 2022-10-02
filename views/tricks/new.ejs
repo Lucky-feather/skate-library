@@ -4,7 +4,7 @@
 <%- include('../partials/nav')  %>
 
 <main>
-
+  <% if (user) { %>
   <form id="new-form" action="/tricks" method="POST">
     <label for="trick-input">What's your trick called?</label>
     <input type="string" name="name" id="trick-input">
@@ -12,6 +12,7 @@
     <textarea name="description" id="content-textarea"></textarea>
     <button type="submit">Add Trick</button>
   </form>
+  <% } %> 
 </main>
 
 <%- include("../partials/footer")  %>
