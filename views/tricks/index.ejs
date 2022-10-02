@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Roller Skate Trick Library</h1>
+  <h2>Get it!</h2>
+	<ul>
+  <% tricks.forEach(trick => { %>
+    <li> <%= trick.name %> </li>
+  <% }) %>
+  </ul>
+  
+</section>
+
+<%- include('../partials/footer') %>

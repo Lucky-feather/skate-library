@@ -1,0 +1,17 @@
+
+<%- include('../partials/html-head')  %> 
+<link rel="stylesheet" href="/stylesheets/new.css">
+<%- include('../partials/nav')  %>
+
+<main>
+
+  <form id="new-form" action="/tricks" method="POST">
+    <label for="trick-input">What's your trick called?</label>
+    <input type="string" name="name" id="trick-input">
+    <label for="description-textarea">Describe Trick:</label>
+    <textarea name="description" id="content-textarea"></textarea>
+    <button type="submit">Add Trick</button>
+  </form>
+</main>
+
+<%- include("../partials/footer")  %>
