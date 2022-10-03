@@ -10,4 +10,13 @@
 
 <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
 
+
+  <a href="/tricks/<%= trick._id %>/edit">
+    <button class="btn">Edit this Trick!</button>
+  </a>
+  <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
+    <button class="btn">Delete my trick from the Library</button>
+  </form>
+
+
 <%- include('../partials/footer') %>

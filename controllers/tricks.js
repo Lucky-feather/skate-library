@@ -1,6 +1,6 @@
 import { Trick } from "../models/trick.js"
 
-function index(req,res) {
+function index(req, res) {
   console.log('SKATE 🛼')
   Trick.find({})
   .then(tricks => { 
@@ -23,9 +23,12 @@ function newTrick(req, res) {
 }
 
 function create(req, res) {
-    console.log('NEW 🏆')
-    Trick.create(req.body)
-    .then(trick => {
+  if (req.body.description === '') {
+    console.log('NOPE')
+    return
+  }
+      Trick.create(req.body)
+      .then(trick => {
       res.redirect('/tricks')
     })
     .catch(err => {
@@ -50,9 +53,23 @@ function create(req, res) {
     })
   }
 
+  function deleteTrick(req, res) {
+    Trick.findByIdAndDelete(req.params.id)
+      .then (deletedTrick => {
+        res.redirect('/tricks')
+        })
+        .catch(err => {
+          console.log(err)
+          res.redirect('/')
+        })
+      }
+    
+
+
 export {
   index,
   newTrick as new,
   create,
   show,
+  deleteTrick as delete,
 }

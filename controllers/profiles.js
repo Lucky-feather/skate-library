@@ -12,7 +12,7 @@ function index(req, res) {
   .then(profiles => {
     // Passing profiles and name, for use in the EJS
     res.render("profiles/index", { 
-      profiles: profiles, 
+      profiles, 
       name: req.query.name,
     })
   })
@@ -21,6 +21,24 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.id)
+  .then(profile => {
+    const isSelf = profile._id.equals(req.user.profile._id)
+    res.render('profiles/show', {
+      title: `${profile.name}'s profile`,
+      isSelf,
+      profile,
+      
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
+
 export {
   index,
+  show
 }

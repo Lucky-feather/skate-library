@@ -3,16 +3,23 @@
 <link rel="stylesheet" href="/stylesheets/new.css">
 <%- include('../partials/nav')  %>
 
+<!DOCTYPE html>
+<html>
+<body>
+  <script src="script.js"></script>
+</body>
+</html>
+
 <main>
-  <% if (user) { %>
+
   <form id="new-form" action="/tricks" method="POST">
     <label for="trick-input">What's your trick called?</label>
-    <input type="string" name="name" id="trick-input">
-    <label for="description-textarea">Describe Trick:</label>
-    <textarea name="description" id="content-textarea"></textarea>
+    <input type="string" name="name" id="trick-input" autocomplete="off">
+    <label for="trick-textarea">Describe Trick:</label>
+    <textarea name="description" id="trick-textarea"></textarea>
     <button type="submit">Add Trick</button>
   </form>
-  <% } %> 
+
 </main>
 
 <%- include("../partials/footer")  %>

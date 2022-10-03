@@ -1,7 +1,7 @@
 import passport from "passport";
 import { GoogleOneTapStrategy as GoogleStrategy } from "passport-google-one-tap"
-import { User } from "../models/user.js"
-import { Profile } from "../models/profile.js"
+import { User } from '../models/user.js'
+import { Profile } from '../models/profile.js'
 
 passport.use(
   new GoogleStrategy(
@@ -14,10 +14,8 @@ passport.use(
       User.findOne({ googleId: profile.id })
       .then(user => {
         if (user) {
-          // PERSON that is logging in already exists in the database - we've seen them before, and they're returning!
           return done(null, user)
         } else {
-          // A NEW USER that has never logged into our app before
           const newProfile = new Profile({
             name: profile.displayName,
             avatar: profile.photos[0].value,
@@ -25,7 +23,7 @@ passport.use(
           const newUser = new User({
             email: profile.emails[0].value,
             googleId: profile.id,
-            skaterProfile: newProfile._id,
+            profile: newProfile._id,
           })
           newProfile.save()
           .then(()=> {
@@ -60,7 +58,7 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (id, done) {
   User.findById(id)
-  .populate('skaterProfile', 'name avatar')
+  .populate('profile', 'name avatar')
   .then(user => {
     done(null, user)
   })

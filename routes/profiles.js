@@ -1,10 +1,12 @@
 import { Router } from 'express'
+import { isLoggedIn } from '../middleware/middleware.js'
 import * as profilesCtrl from '../controllers/profiles.js'
 
 const router = Router()
 
-// GET /profiles
 router.get('/', profilesCtrl.index)
+router.get('/', isLoggedIn, profilesCtrl.index)
+router.get('/:id', isLoggedIn, profilesCtrl.show)
 
 // POST /facts
 // We will already have access to the logged in profile on
@@ -14,10 +16,6 @@ router.get('/', profilesCtrl.index)
 // DELETE /facts/:id
 //router.delete('/facts/:id', profilesCtrl.deleteFact)
 
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next()
-  res.redirect('/profiles')
-}
 
 export {
   router
