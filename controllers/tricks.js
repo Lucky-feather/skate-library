@@ -16,13 +16,14 @@ function index(req, res) {
 }
 
 function newTrick(req, res) {
-  const newTrick = new Trick()
   res.render('tricks/new', { 
     title: 'Add a Trick'
   })
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
+  console.log(req.body)
   if (req.body.description === '') {
     console.log('NOPE')
     return
@@ -30,6 +31,7 @@ function create(req, res) {
   Trick.create(req.body)
     .then(trick => {
     res.redirect('/tricks')
+    console.log(Trick)
   })
   .catch(err => {
     console.log(err)
