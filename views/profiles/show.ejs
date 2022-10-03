@@ -51,5 +51,16 @@
         <% } %>
     <% }) %>
   <% } %>
+
+  <% if (profile.unlocked.length) { %>
+    <h2>
+      Tricks Unlocked
+    </h2>
+    <% profile.unlocked.forEach(item => { %>
+      <ul>
+        <li> 🏆 <%= item.name %> </li>
+      </ul>
+    <% }) %>
+  <% } %>
 </main>
   <%- include('../partials/footer') %>

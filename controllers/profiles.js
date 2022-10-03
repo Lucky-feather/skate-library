@@ -1,4 +1,5 @@
 import { Profile, Skates } from '../models/profile.js'
+import { Trick } from '../models/trick.js'
 
 function index(req, res) {
   // Make the query object to use with Profile.find based on
@@ -69,6 +70,8 @@ function deleteSkates(req, res) {
     res.redirect(`/profiles/${req.user.profile._id}`)
   })
 }
+
+
 
 
 export {

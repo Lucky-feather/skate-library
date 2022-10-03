@@ -23,7 +23,6 @@ function newTrick(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  console.log(req.body)
   if (req.body.description === '') {
     console.log('NOPE')
     return
@@ -43,7 +42,6 @@ function show(req, res) {
   Trick.findById(req.params.id)
   .populate('owner')
   .then(trick => {
-    console.log(trick)
     res.render('tricks/show', {
       trick,
       title: trick.name
@@ -77,7 +75,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  console.log (req.body)
   Trick.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then (trick => {
     res.redirect(`/tricks/${trick._id}`)
@@ -85,6 +82,21 @@ function update(req, res) {
   .catch(err => {
     console.log(err)
     res.redirect('/')
+  })
+}
+function addUnlocked(req, res) {
+  console.log(req.body)
+  Trick.findById(req.trick._id)
+  .then(profile => {
+    profile.unlocked.push(req.body)
+    profile.save()
+    .then(()=> {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`../profiles/${req.user.profile._id}`)
   })
 }
 
@@ -98,4 +110,5 @@ export {
   deleteTrick as delete,
   edit,
   update,
+  addUnlocked,
 }
