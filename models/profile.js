@@ -2,9 +2,6 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const unlockedSchema = new Schema ({
-  name: String
-})
 
 const skateSchema = new Schema({
   boots: String,
@@ -18,7 +15,7 @@ const profileSchema = new Schema({
   name: String,
   avatar: String,
   skates: [skateSchema],
-  unlocked: [unlockedSchema]
+  unlocked: [{ type: Schema.Types.ObjectId, ref: "Trick"}]
 }, {
   timestamps: true
 })

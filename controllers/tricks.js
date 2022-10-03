@@ -1,3 +1,4 @@
+import { Profile } from "../models/profile.js"
 import { Trick } from "../models/trick.js"
 
 function index(req, res) {
@@ -86,13 +87,17 @@ function update(req, res) {
 }
 function addUnlocked(req, res) {
   console.log(req.body)
-  Trick.findById(req.trick._id)
+  Profile.findById(req.user.profile._id)
   .then(profile => {
-    profile.unlocked.push(req.body)
-    profile.save()
-    .then(()=> {
-      res.redirect(`/profiles/${req.user.profile._id}`)
+    Trick.findById(req.params.id)
+    .then(trick =>  {
+      profile.unlocked.push(trick)
+      profile.save()
+      .then(()=> {
+        res.redirect(`/profiles/${req.user.profile._id}`)
+      })
     })
+
   })
   .catch(err => {
     console.log(err)
