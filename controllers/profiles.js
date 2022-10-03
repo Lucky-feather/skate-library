@@ -14,6 +14,7 @@ function index(req, res) {
     res.render("profiles/index", { 
       profiles, 
       name: req.query.name,
+      title: `profiles`,
     })
   })
   .catch(err => {
@@ -37,6 +38,8 @@ function show(req, res) {
     res.redirect('/profiles')
   })
 }
+
+
 
 export {
   index,

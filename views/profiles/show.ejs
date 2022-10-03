@@ -10,6 +10,45 @@
     >
   </div>
   <%# isSelf replaces profile._id.equals(user.profile._id) %> 
-  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-
+  <h1> It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <% if (isSelf) { %>
+    <h2>Add a Skate Setup</h2>
+    <form action="/profiles/<%= profile._id %>/skates" method="POST">
+      <label>
+        Boots:
+        <input type="text" name="boots" autocomplete="off">
+      </label>
+      <label>
+        Wheels:
+        <input type="text" name="wheels" autocomplete="off">
+      </label>
+      <label>
+        Other Cool Info:
+        <input type="text" name="other" value="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off">
+      </label>
+      <button type="submit">Share My Skates</button>
+    </form>
+  <% } %>
+  <% if (profile.skates.length) { %>
+    <h2>
+      <%= isSelf ? "Your" : `${profile.name}'s` %> Skates 
+    </h2>
+    <% profile.skates.forEach(skate => { %>
+      <ul>
+        <li> Boots: <%= skate.boots %> </li>
+        <li> Wheels: <%= skate.wheels %> </li>
+        <li> Other Cool Stuff: <%= skate.other %> </li>
+      </ul>  
+        <% if (isSelf) { %>
+          <form 
+            action="/profiles/skates/<%= skate._id %>?_method=DELETE"
+            method="POST"
+            style="display: inline-block;"
+          >
+            <button type="submit"> remove from my profile </button>
+          </form>
+        <% } %>
+    <% }) %>
+  <% } %>
+</main>
   <%- include('../partials/footer') %>
