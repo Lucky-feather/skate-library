@@ -6,6 +6,8 @@ const skateSchema = new Schema({
   boots: String,
   wheels: String,
   other: String,
+}, {
+  timestamps: true
 })
 
 const profileSchema = new Schema({
@@ -21,5 +23,5 @@ const Skates = mongoose.model('Skates', skateSchema)
 
 export {
   Profile,
-  Skates
+  Skates,
 }

@@ -26,7 +26,7 @@
         Other Cool Info:
         <input type="text" name="other" value="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off">
       </label>
-      <button type="submit">Share My Skates</button>
+      <button type="submit"> Share My Skates </button>
     </form>
   <% } %>
   <% if (profile.skates.length) { %>
@@ -34,6 +34,7 @@
       <%= isSelf ? "Your" : `${profile.name}'s` %> Skates 
     </h2>
     <% profile.skates.forEach(skate => { %>
+      <h3>🛼</h3>
       <ul>
         <li> Boots: <%= skate.boots %> </li>
         <li> Wheels: <%= skate.wheels %> </li>
