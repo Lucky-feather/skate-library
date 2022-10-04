@@ -1,10 +1,16 @@
+/*font-family: 'Alkalami', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'PT Serif', serif;
+*/
+
+
 html {
   box-sizing: border-box;
   box-sizing: inherit;
 }
 
 body { 
-  background-color: #D81159;
+  background-color: black;
   background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
   background-size:auto
 }
@@ -30,23 +36,30 @@ section {
   width: 70%;
 }
 .primary-section {
-  outline: 5px solid blue;
   min-height: 400px;
+  width: 100%;
+  padding-top: 5%;
+  border-radius: 47% 53% 48% 52% / 0% 0% 100% 100% ; 
 }
 
 nav {
-  background-color: #E8E9F3;
+  background-color: #FBB13C;
   color: #323031;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  margin: 0%;
+  width: 100%;
   min-height: 60px;
-  border-bottom: 3px solid #FBB13C;
+
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  display: flex;
+  align-items: center;
 }
 
 ul {
@@ -80,7 +93,7 @@ pre {
 nav > a {
   margin: 10px 30px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 24px, auto;
   display: flex;
   align-items: center;
   justify-content: center;
