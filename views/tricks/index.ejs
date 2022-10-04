@@ -1,9 +1,11 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/tricks/index.css">
+<main>
 
-<section>
+<section class="primary-section">
   <h1>Roller Skate Trick Library</h1>
-  <h2>Get it!</h2>
+  <h4>click on the trick for description</h4>
 	<ul>
   <% tricks.forEach(trick => { %>
     <li>
@@ -14,11 +16,13 @@
   </ul>
   
 </section>
-
-<section>
+<% if (user) { %>
+  <section>
   <a href="tricks/new">
-    <button class="btn">Add a New Trick</button>
-
+  <button class="btn">Add a New Trick</button>
 </section>
+<% } %>
+
+</main>
 
 <%- include('../partials/footer') %>

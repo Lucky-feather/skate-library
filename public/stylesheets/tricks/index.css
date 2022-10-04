@@ -1,59 +1,63 @@
 html {
-  box-sizing: border-box
-}
-
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+  box-sizing: border-box;
   box-sizing: inherit;
 }
 
-main{
-background-color: #1a1a1a;
-  color: #f6f6f6;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
-  margin: 0;
+body { 
+  background-color: #D81159;
+  background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
+  background-size:auto
 }
-
-nav {
-  background-color: #f6f6f6;
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  min-height: 60px;
-}
-
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+  color: #f6f6f6;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+    'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  outline: 5px solid rgb(0, 255, 94);
+  width: 70%;
+}
+.primary-section {
+  outline: 5px solid blue;
+  min-height: 400px;
+}
+
+nav {
+  background-color: #E8E9F3;
+  color: #323031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 60px;
+  border-bottom: 3px solid #FBB13C;
 }
 
 h1 {
   font-size: 36px;
 }
 
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
 ul {
   list-style-type: none;
 }
 
-p, label, li, button, input {
+li {
+  font-size: 30px;
+}
+
+p, label, button, input {
   font-size: 18px;
 }
 
@@ -66,7 +70,7 @@ section {
 }
 
 a {
-  color: #00B7FF;
+  color: inherit;
 }
 
 pre {
@@ -80,6 +84,7 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: inherit;
 }
 
 .btn {

@@ -10,6 +10,7 @@
 
 <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
 
+<% if (user) { %>
 
   <a href="/tricks/<%= trick._id %>/edit">
     <button class="btn">Edit this Trick!</button>
@@ -24,5 +25,7 @@
     <button class="submit">Add</button>
   </form>
 </section>
+
+<% } %> 
 
 <%- include('../partials/footer') %>
