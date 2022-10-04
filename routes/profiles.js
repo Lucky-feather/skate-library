@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import { isLoggedIn } from '../middleware/middleware.js'
 import * as profilesCtrl from '../controllers/profiles.js'
-import { Unlocked } from '../models/profile.js'
 
 const router = Router()
 
@@ -10,7 +9,7 @@ router.get('/', isLoggedIn, profilesCtrl.index)
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 router.post('/:id/skates', profilesCtrl.createSkates)
 router.delete('/skates/:id', profilesCtrl.deleteSkates)
-
+router.post('/:id/unlocked',profilesCtrl.addUnlocked)
 
 export {
   router

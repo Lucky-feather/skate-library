@@ -85,26 +85,6 @@ function update(req, res) {
     res.redirect('/')
   })
 }
-function addUnlocked(req, res) {
-  console.log(req.body)
-  Profile.findById(req.user.profile._id)
-  .then(profile => {
-    Trick.findById(req.params.id)
-    .then(trick =>  {
-      profile.unlocked.push(trick)
-      profile.save()
-      .then(()=> {
-        res.redirect(`/profiles/${req.user.profile._id}`)
-      })
-    })
-
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`../profiles/${req.user.profile._id}`)
-  })
-}
-
 
 
 export {
@@ -115,5 +95,4 @@ export {
   deleteTrick as delete,
   edit,
   update,
-  addUnlocked,
 }

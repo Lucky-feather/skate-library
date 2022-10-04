@@ -17,11 +17,12 @@
   <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
     <button class="btn">Delete my trick from the Library</button>
   </form>
-  <section>
-    I did it! Add this trick to the 'Unlocked' list on my profile
-    <form action="../profiles/<%= user.profile._id %>/unlocked" method="POST">
+<section>
+  I did it! Add this trick to the 'Unlocked' list on my profile
+  <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
+    <input type="hidden" name="trickId" value="<%= trick._id %>">
     <button class="submit">Add</button>
   </form>
-  </section>
+</section>
 
 <%- include('../partials/footer') %>

@@ -1,4 +1,4 @@
-import { Profile, Skates } from '../models/profile.js'
+import { Profile } from '../models/profile.js'
 import { Trick } from '../models/trick.js'
 
 function index(req, res) {
@@ -26,7 +26,9 @@ function index(req, res) {
 function show(req, res) {
   console.log(req.user)
   Profile.findById(req.params.id)
+  .populate("unlocked")
   .then(profile => {
+    console.log(profile)
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render('profiles/show', {
       title: `${profile.name}'s profile`,
@@ -71,6 +73,19 @@ function deleteSkates(req, res) {
   })
 }
 
+function addUnlocked(req, res) {
+  console.log(req.params, 'params', req.body, 'body')
+  Profile.findById(req.params.id)
+  .then(profile => {
+    console.log(profile)
+    profile.unlocked.push(req.body.trickId) // <== push Obj Id
+    profile.save().then( () => { res.redirect(`/profiles/${profile._id}`) })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+}
 
 
 
@@ -79,4 +94,5 @@ export {
   show,
   createSkates,
   deleteSkates,
+  addUnlocked,
 }

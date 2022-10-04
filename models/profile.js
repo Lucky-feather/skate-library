@@ -22,10 +22,8 @@ const profileSchema = new Schema({
 
 const Profile = mongoose.model('Profile', profileSchema)
 const Skates = mongoose.model('Skates', skateSchema)
-const Unlocked = mongoose.model('Unlocked', unlockedSchema)
 
 export {
   Profile,
   Skates,
-  Unlocked
 }
