@@ -1,8 +1,10 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/signin.css">
 
 <main>
-  <h1>Hello, <%= user ? user.profile.name : "Skater" %></h1>
+  <section>
+  <h1>Roller Skate <br> Trick Library</h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -11,6 +13,7 @@
  
       />
     </div>
+  </section>
   <% } %>
  
 </main>

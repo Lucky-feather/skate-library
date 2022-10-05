@@ -1,0 +1,161 @@
+/*font-family: 'Alkalami', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'PT Serif', serif;
+*/
+
+
+html {
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body { 
+  background-color: #323031;
+  background-image: url("https://live.staticflickr.com/65535/52406689939_acbbc8e671_b.jpg");
+  background-position:unset ;
+
+
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  color: #f6f6f6;
+  font-family: 'PT Serif', serif;
+  margin: 0;
+}
+
+#profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #323031;
+  text-align: center;
+  width: 100%;
+  padding: 5%;
+  min-height: 200px;
+  opacity: 90%;
+}
+
+.add-skates {
+  width: 100%;
+  padding: 5%;
+  background-color: #323031;
+  justify-content: center;
+  align-items: center;
+}
+.add-skates h2 {
+  color: #E8E9F3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+input, textarea {
+  margin: 3%;
+}
+
+.skate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D81159;
+  opacity: 95%;
+  width: 100%;
+  padding: 5%;
+  font-size: 20px;
+}
+.show {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:#323031;
+  width: 80%;
+  padding: 5%;
+  margin: 8%;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 8%;
+}
+
+.unlocked-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #188FA7;
+  opacity: 95%;
+  width: 100%;
+  padding: 5%;
+  font-size: 20px;
+}
+
+.show-unlocked {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:#323031;
+  width: 80%;
+  padding: 5%;
+  margin: 8%;
+  text-align: left;
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  margin: 8% ;
+}
+
+nav {
+  background-color: #FBB13C;
+  color: #323031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0%;
+  width: 100%;
+  min-height: 60px;
+
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #323031;
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav > a {
+  margin: 10px 30px;
+  font-size: 24px, auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  font-family: 'Fredericka the Great', cursive;
+}
+

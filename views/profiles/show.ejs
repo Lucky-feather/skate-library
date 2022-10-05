@@ -1,40 +1,45 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
 <main>
-  <div>
-    <img
-      class="profile-avatar"
-      src="<%= profile.avatar %>" 
-      alt="<%= profile.name %>'s avatar"
-    >
+  <div id="profile-header">
+    <h1> Hey <%= isSelf ? "Skater" : profile.name %></h1>
+    <div>
+      <img
+        class="profile-avatar"
+        src="<%= profile.avatar %>" 
+        alt="<%= profile.name %>'s avatar"
+      >
+    </div>
   </div>
-  <%# isSelf replaces profile._id.equals(user.profile._id) %> 
-  <h1> It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <div class ="add-skates">
   <% if (isSelf) { %>
     <h2>Add a Skate Setup</h2>
     <form action="/profiles/<%= profile._id %>/skates" method="POST">
+        <label>
+          Boots:
+          <input type="text" name="boots" autocomplete="off">
+        </label>
+        <label>
+          Wheels:
+          <input type="text" name="wheels" autocomplete="off">
+        </label>
       <label>
-        Boots:
-        <input type="text" name="boots" autocomplete="off">
-      </label>
-      <label>
-        Wheels:
-        <input type="text" name="wheels" autocomplete="off">
-      </label>
-      <label>
-        Other Cool Info:
-        <input type="text" name="other" placeholder="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off">
+        Other Cool Info: <br>
+        <textarea type="text" name="other" placeholder="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off"></textarea>
       </label>
       <button type="submit"> Share My Skates </button>
     </form>
   <% } %>
+  </div>
+  <section class="skate-container">
   <% if (profile.skates.length) { %>
     <h2>
-      <%= isSelf ? "Your" : `${profile.name}'s` %> Skates 
+      <%= isSelf ? "Your" : `${profile.name}'s` %> Skates: 
     </h2>
     <% profile.skates.forEach(skate => { %>
-      <h3>🛼</h3>
+      <div class="show">
       <ul>
         <li> Boots: <%= skate.boots %> </li>
         <li> Wheels: <%= skate.wheels %> </li>
@@ -46,21 +51,26 @@
             method="POST"
             style="display: inline-block;"
           >
-            <button type="submit"> remove from my profile </button>
+            <button type="submit">remove</button>
           </form>
         <% } %>
+      </div>
     <% }) %>
   <% } %>
-
+</section>
+<section class="unlocked-container">
   <% if (profile.unlocked.length) { %>
     <h2>
       Tricks Unlocked
     </h2>
+    <div class="show">
     <% profile.unlocked.forEach(item => { %>
       <ul>
-        <li> 🏆 <%= item.name %> </li>
+        <li> <%= item.name %> </li>
       </ul>
     <% }) %>
+  </div>
   <% } %>
+</section>
 </main>
   <%- include('../partials/footer') %>
