@@ -3,45 +3,38 @@ font-family: 'Fredericka the Great', cursive;
 font-family: 'PT Serif', serif;
 */
 
-
 html {
   box-sizing: border-box;
   box-sizing: inherit;
 }
 
 body { 
-  background-color: black;
+  background-color: #323031;
   background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
   background-size:auto
 }
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  color: #f6f6f6;
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  color: #E8E9F3;
+  font-family: 'PT Serif', serif;
   margin: 0;
 }
 
-section {
+#library-index {
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  background-color: #1a1a1a;
-  outline: 5px solid rgb(0, 255, 94);
+  min-height: 100vh;
   width: 70%;
+  background-color: #323031;
+  opacity: 90%;
   font-family: 'PT Serif', serif;
   text-align: center;
-}
-.primary-section {
-  min-height: 400px;
-  width: 100%;
-  padding-top: 5%;
-  border-radius: 47% 53% 48% 52% / 0% 0% 100% 100% ; 
+
 }
 
 nav {
@@ -52,13 +45,12 @@ nav {
   justify-content: center;
   padding: 10px;
   margin: 0%;
-  width: 100%;
+  width: 100vw;
   min-height: 60px;
-
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-family: 'Fredericka the Great', cursive;
   display: flex;
   align-items: center;
@@ -67,18 +59,31 @@ h1 {
 
 ul {
   list-style-type: none;
+  text-align: left;
+  font-size: 15px;
+  border: 3px solid greenyellow;
+  background-color: #323031;
+}
+
+a:hover {
+  color: #FBB13C;
 }
 
 li {
-  font-size: 30px;
+  font-size: 25px;
 }
 
-p, label, button, input {
+button {
   font-size: 18px;
+  margin: 16px 0;
+  background: none;
+  font-family: 'PT Serif', serif;
+  border: none;
+  color: #E8E9F3;
 }
 
-label {
-  font-weight: bold;
+button:hover {
+  color: #188FA7;
 }
 
 section {
@@ -90,10 +95,6 @@ a {
   text-decoration: none;
 }
 
-pre {
-  font-size: 14px;
-}
-
 nav > a {
   margin: 10px 30px;
   font-size: 24px, auto;
@@ -102,18 +103,4 @@ nav > a {
   justify-content: center;
   color: inherit;
   font-family: 'Fredericka the Great', cursive;
-}
-
-.btn {
-  margin: 16px 0;
-}
-
-.link {
-  padding: 10px 0;
-  font-size: 18px;
-  display: inline-block;
-}
-
-.profile-avatar {
-  margin-top: 50px;
 }
