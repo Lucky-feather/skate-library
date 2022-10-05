@@ -5,17 +5,14 @@
 <main>
   <section>
   <h1>Roller Skate <br> Trick Library</h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
- 
-      />
-    </div>
+  <p>
+    Welcome to the community driven Roller Skate Trick Library! 
+    <br>
+    Guests are always welcome to browse the library.  Log in and add your own tricks for others to try. When you've learned to do a trick, use the 'i did it!' button at the bottom of the trick's description to add it to your 'Unlocked' list.
+    <br>
+    Your profile also has a place for you to describe your skates, so you can let everyone know how you roll. 
+  </p>
   </section>
-  <% } %>
- 
 </main>
 
 <%- include('./partials/footer') %>

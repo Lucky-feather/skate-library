@@ -1,3 +1,8 @@
+/*font-family: 'Alkalami', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'PT Serif', serif;
+*/
+
 html {
   box-sizing: border-box;
   box-sizing: inherit;
@@ -8,32 +13,45 @@ html {
 
 body { 
   background-color: #323031;
-  background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
-  background-size:auto
+  background-image: url("https://live.staticflickr.com/65535/52406689939_acbbc8e671_b.jpg");
+  background-position:unset ;
+
+
 }
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   height: 100%;
   color: #f6f6f6;
   font-family: 'PT Serif', serif;
   margin: 0;
 }
 
-section {
+#new {
   display: flex;
   align-items: center;
-  justify-content: start;
   flex-direction: column;
-  background-color: #323031;
-  width: 70%;
-  text-align: center;
-  width: 100vw;
-  min-height: 400px;
-  opacity: 90%;
+  background-color:#323031;
+  width: 80%;
+  padding: 5%;
+  margin: 8%;
+  text-align: left;
+  font-size: 25px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+input, textarea {
+  margin: 8%;
+}
+
 
 nav {
   background-color: #FBB13C;
@@ -43,21 +61,9 @@ nav {
   justify-content: center;
   padding: 10px;
   margin: 0%;
-  width: 100%;
+  width: 100vw;
   min-height: 60px;
 
-}
-
-h1 {
-  font-size: 40px;
-  font-family: 'Fredericka the Great', cursive;
-  align-items: center;
-
-}
-
-
-section {
-  padding: 50px;
 }
 
 a {
@@ -67,12 +73,11 @@ a {
 
 nav > a {
   margin: 10px 30px;
-  font-size: 30px, auto;
+  font-size: 24px, auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: inherit;
   font-family: 'Fredericka the Great', cursive;
 }
-
 

@@ -1,25 +1,18 @@
 
 <%- include('../partials/html-head')  %> 
-<link rel="stylesheet" href="/stylesheets/tricks/index.css">
+<link rel="stylesheet" href="/stylesheets/tricks/new.css">
 <%- include('../partials/nav')  %>
 
-<!DOCTYPE html>
-<html>
-<body>
-  <script src="script.js"></script>
-</body>
-</html>
-
 <main>
-
-  <form id="new-form" action="/tricks" method="POST">
-    <label for="trick-input">What's your trick called?</label>
-    <input type="string" name="name" id="trick-input" autocomplete="off">
-    <label for="trick-textarea">Describe Trick:</label>
-    <textarea name="description" id="trick-textarea"></textarea>
-    <button type="submit">Add Trick</button>
-  </form>
-
+  <section id="new">
+    <form id="new-form" action="/tricks" method="POST">
+      <label for="trick-input">What's your trick called?</label>
+      <input type="string" name="name" id="trick-input" autocomplete="off">
+      <label for="trick-textarea">Describe Trick:</label>
+      <textarea name="description" id="trick-textarea"></textarea>
+      <button type="submit">Add Trick</button>
+    </form>
+  </section> 
 </main>
 
 <%- include("../partials/footer")  %>

@@ -12,10 +12,10 @@
 <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
 </section>
 
-<% if (trick.owner === (user?.profile._id)) { %>
-  <section class="update"></section>
+<% if (trick.owner.equals(user?.profile._id)) { %>
+  <section class="update">
   <a href="/tricks/<%= trick._id %>/edit">
-    <button class="btn">Edit this Trick!</button>
+    <button class="btn">Edit my trick</button>
   </a>
   <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
     <button class="btn">Delete my trick from the Library</button>

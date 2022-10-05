@@ -1,6 +1,6 @@
 
 <%- include('../partials/html-head')  %> 
-<link rel="stylesheet" href="/stylesheets/new.css">
+<link rel="stylesheet" href="/stylesheets/tricks/new.css">
 <%- include('../partials/nav')  %>
 
 <!DOCTYPE html>
@@ -11,15 +11,15 @@
 </html>
 
 <main>
-
+<section id="new">
   <form id="new-form" action="/tricks/<%= trick._id %>?_method=PUT" method="POST">
-    <label for="trick-input">What's your trick called?</label>
+    <label for="trick-input">Trick name:</label>
     <input type="string" name="name" id="trick-input" value="<%= trick.name %>" autocomplete="off">
-    <label for="trick-textarea">Describe Trick:</label>
+    <label for="trick-textarea">Description:</label>
     <textarea name="description" id="trick-textarea"><%= trick.description %></textarea>
     <button type="submit">Update Trick</button> 
   </form>
-
+</section>
 </main>
 
 <%- include("../partials/footer")  %>
