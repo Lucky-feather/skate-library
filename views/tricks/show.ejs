@@ -1,31 +1,37 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/tricks/show.css">
 <%- include('../partials/nav') %>
 
+<main>
 <section id="details">
   
   <h1><%= trick.name %></h1>
   <h3><%= trick.description %> </h3>
-  
-</section>
+
 
 <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
+</section>
 
-<% if (user) { %>
-
+<% if (trick.owner === (user?.profile._id)) { %>
+  <section class="update"></section>
   <a href="/tricks/<%= trick._id %>/edit">
     <button class="btn">Edit this Trick!</button>
   </a>
   <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
     <button class="btn">Delete my trick from the Library</button>
   </form>
-<section>
-  I did it! Add this trick to the 'Unlocked' list on my profile
+</section>
+  <% } %>
+
+  <% if (user) { %>
+<section class="add">
+  I did it!  Add this trick to the 'Unlocked' list on my profile
   <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
     <input type="hidden" name="trickId" value="<%= trick._id %>">
     <button class="submit">Add</button>
   </form>
 </section>
+<% } %>
 
-<% } %> 
-
+</main>
 <%- include('../partials/footer') %>
