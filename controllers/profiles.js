@@ -74,6 +74,7 @@ function deleteSkates(req, res) {
 }
 
 function addUnlocked(req, res) {
+
   console.log(req.params, 'params', req.body, 'body')
   Profile.findById(req.params.id)
   .then(profile => {

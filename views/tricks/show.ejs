@@ -22,8 +22,7 @@
   </form>
 </section>
   <% } %>
-
-  <% if (user) { %>
+  <% if (user)  { %>
 <section class="add">
   I did it!  Add this trick to the 'Unlocked' list on my profile
   <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
