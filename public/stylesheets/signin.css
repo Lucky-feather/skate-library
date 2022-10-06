@@ -1,20 +1,25 @@
-
+html {
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
 
 body { 
   background-color: #323031;
   background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
-  background-size:auto
+  background-size:auto;
+  margin: 0;
 }
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: max-content;
   height: 100%;
   color: #f6f6f6;
   font-family: 'PT Serif', serif;
-  margin: 0;
+
+  width: 100vw;
+  
 }
 
 section {
@@ -23,7 +28,6 @@ section {
   justify-content: start;
   flex-direction: column;
   background-color: #323031;
-  width: 70%;
   text-align: center;
   width: 100vw;
   min-height: 400px;
@@ -35,22 +39,18 @@ nav {
   color: #323031;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 10px;
-  border: 10px;
   margin: 0%;
-  width: 100%;
+  width: 100vw;
   min-height: 60px;
-
 }
 
 h1 {
   font-size: 40px;
   font-family: 'Fredericka the Great', cursive;
   align-items: center;
-
 }
-
 
 section {
   padding: 50px;

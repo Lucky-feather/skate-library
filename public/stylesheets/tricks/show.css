@@ -6,20 +6,20 @@ html {
 body { 
   background-color: #323031;
   background-image: url("https://live.staticflickr.com/65535/52405173060_96f5917f54_h.jpg");
-  background-size:auto
+  background-size:auto;
+  margin: 0;
 }
 
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   color: #E8E9F3;
   font-family: 'PT Serif', serif;
-  display: flex;
+  height: 100%;
   align-items: center;
-  justify-content: start;
-  flex-direction: column;
+ 
 }
 
 #details { 

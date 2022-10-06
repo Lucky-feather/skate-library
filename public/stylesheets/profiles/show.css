@@ -15,18 +15,18 @@ html {
 body { 
   background-color: #323031;
   background-image: url("https://live.staticflickr.com/65535/52406689939_acbbc8e671_b.jpg");
-  background-position:unset ;
-
-
+  background-position: unset;
+  background-size: auto;
+  margin: 0;
 }
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100%;
-  color: #f6f6f6;
+  color: #E8E9F3;
   font-family: 'PT Serif', serif;
   margin: 0;
 }
