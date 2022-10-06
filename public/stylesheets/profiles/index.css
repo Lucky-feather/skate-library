@@ -96,3 +96,15 @@ nav > a {
   font-family: 'Fredericka the Great', cursive;
 }
 
+@media only screen and (min-width: 600px) {
+
+.card-container {
+  display: flex;
+  background-color: #323031;
+  opacity: 90%;
+  width: 80%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+}
