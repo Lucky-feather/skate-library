@@ -12,6 +12,7 @@ body {
   background-size: auto;
   margin: 0;
 }
+
 main {
   display: flex;
   align-items: center;
@@ -38,7 +39,6 @@ section {
 }
 
 .card-container {
-
   background-color: #323031;
   border-radius: 47% 53% 48% 52% / 0% 0% 100% 100%;
   opacity: 90%;
@@ -102,9 +102,19 @@ nav > a {
   display: flex;
   background-color: #323031;
   opacity: 90%;
-  width: 80%;
+  width: 85%;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+.card {
+  width: 200px;
+  height: 90px;
+  margin: 30px;
+  align-items: center;
+}
+
+.card-title {
+  max-width: 75px;
+}
 }
