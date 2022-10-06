@@ -41,6 +41,10 @@ main {
   font-size: 25px;
 }
 
+.description {
+  padding: 5% 15%;
+}
+
 .trick-frame {
   display: flex;
   flex-direction: column;
@@ -101,12 +105,7 @@ button {
 }
 
 button:hover {
-  color: #188FA7;
-}
-
-
-button:hover {
-  color: #188FA7;
+  color: #FBB13C
 }
 
 a {
