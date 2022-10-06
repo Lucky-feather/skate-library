@@ -68,10 +68,10 @@ nav {
   justify-content: center;
   padding: 10px;
   margin: 0%;
-  width: 100%;
+  width: 100vw;
   min-height: 60px;
-
 }
+
 
 h1 {
   font-size: 40px;
