@@ -44,6 +44,19 @@ main {
   font-size: 25px;
 }
 
+button {
+  font-size: 18px;
+  margin: 16px 0;
+  background: none;
+  font-family:  'Fredericka the Great', cursive;
+  border: none;
+  color: #E8E9F3;
+}
+
+button:hover {
+  color: #FBB13C
+}
+
 form {
   display: flex;
   flex-direction: column;
