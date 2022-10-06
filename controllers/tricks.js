@@ -7,7 +7,7 @@ function index(req, res) {
   .then(tricks => { 
     res.render('tricks/index', { 
       tricks,
-      title: '🛼 Trick Library'
+      title: 'Trick Library'
     })
   })
   .catch(err => {

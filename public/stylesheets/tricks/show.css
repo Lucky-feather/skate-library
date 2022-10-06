@@ -25,46 +25,44 @@ main {
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  margin: 5%;
-  padding: 10%;
-  width: 80%;
-  background-color: #188FA7;
-  opacity: 90%;
 }
 
 #details { 
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  background-color:#323031;
-  width: 80%;
-  padding: 5%;
+  width: 100%;
+  padding: 5% 15%;
+  background-color: #323031;
+  justify-content: center;
+  align-items: center;
   margin: 8%;
   text-align: left;
   font-size: 25px;
 }
 
-.update {
+.trick-frame {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color:#323031;
-  width: 80%;
+  align-items: center;
+  justify-content: center;
+  background-color: #D81159;
+  opacity: 95%;
+  width: 100%;
   padding: 5%;
-  margin: 8%;
-  text-align: left;
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.add {
+.add, .update {
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   background-color:#323031;
   width: 80%;
   padding: 5%;
-  margin: 8%;
-  text-align: left;
+  margin: 4%;
+  text-align: center;
   font-size: 15px;
 }
 
@@ -96,10 +94,16 @@ h1 {
 button {
   font-size: 18px;
   margin: 16px 0;
-  background: #E8E9F3;
-  font-family: 'PT Serif', serif;
-  color: #323031;
+  background: none;
+  font-family:  'Fredericka the Great', cursive;
+  border: none;
+  color: #E8E9F3;
 }
+
+button:hover {
+  color: #188FA7;
+}
+
 
 button:hover {
   color: #188FA7;

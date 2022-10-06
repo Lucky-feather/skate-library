@@ -3,15 +3,15 @@
 <%- include('../partials/nav') %>
 
 <main>
-<section id="details">
-  
-  <h1><%= trick.name %></h1>
-  <h3><%= trick.description %> </h3>
+  <section id="details">
+    <container style ="trick-frame">
+    <h1><%= trick.name %></h1>
+    <h3><%= trick.description %> </h3>
+    </container>
 
-
-<p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
-</section>
-
+  <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
+  </section>
+  <container class ="trick-frame">
 <% if (trick.owner.equals(user?.profile._id)) { %>
   <section class="update">
   <a href="/tricks/<%= trick._id %>/edit">
@@ -24,13 +24,14 @@
   <% } %>
   <% if (user)  { %>
 <section class="add">
-  I did it!  Add this trick to the 'Unlocked' list on my profile
   <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
     <input type="hidden" name="trickId" value="<%= trick._id %>">
-    <button class="submit">Add</button>
+    <button class="submit">I did it! </button>
+    <br>
+    Add this trick to the 'Unlocked' list on my profile.
   </form>
 </section>
 <% } %>
-
+</container>
 </main>
 <%- include('../partials/footer') %>
