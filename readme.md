@@ -16,13 +16,28 @@ The library itself can be viewed as a guest to the site. In order to contribute 
 - Express.js | Node.js
 - HTML | CSS
 - JavaScript
+- OAuth -Google
+- Bootstrap
 
+### Design
 
+Color Palette:
+!["color Palette"](https://live.staticflickr.com/65535/52409778773_8ed0a16bff_b.jpg)
 
+This is an application that is likely to be used on a phone, so responsive design is something I took into consideration.
 
+!["example of screen view"](https://live.staticflickr.com/65535/52409268026_d5b94c2a3a_b.jpg)
 
+!["user profile screen view"](https://live.staticflickr.com/65535/52409268006_9787ba3ca4_b.jpg)
 
-Ice Box items:
+### Ice Box items:
+- As a user I want to delete tricks from my 'Unlocked' list.
 - As a user I would like to be able to add links to youtube or instagram videos along with description of my tricks.
 - As a user I would like to be able to comment on other people's tricks. 
 - As a user I would like to be able to organize tricks in the library based on the type of skating they involve, Such as dance moves, or skate park skills.
+
+
+
+I hope you enjoy this application as much as I enjoy roller skating!
+
+Lindsay Henderson | lindsaynhenderson@gmail.com
