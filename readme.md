@@ -30,15 +30,20 @@ This is an application that is likely to be used on a phone, so responsive desig
 
 !["user profile screen view"](https://live.staticflickr.com/65535/52409268006_9787ba3ca4_b.jpg)
 
+### Additional Resources
+- Favicon taken from [favicon io](https://favicon.io)
+- Photos by Michele Hale
+- Google font: 'Alkalami', ‘'Fredericka the Great', 'PT Serif',
+
 ### Ice Box items:
 - As a user I want to delete tricks from my 'Unlocked' list.
 - As a user I would like to be able to add links to youtube or instagram videos along with description of my tricks.
 - As a user I would like to be able to comment on other people's tricks. 
-- As a user I would like to be able to organize tricks in the library based on the type of skating they involve, Such as dance moves, or skate park skills.
+- As a user I would like to be able to organize tricks in the library based on the type of skating they involve, such as dance moves, or skate park skills.
 
 
 
-I hope you enjoy this application as much as I enjoy roller skating!
+I hope you enjoy this application as much as I enjoy roller skating.
 
 
 2022 Lindsay Henderson | lindsaynhenderson@gmail.com
