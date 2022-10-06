@@ -4,7 +4,7 @@
 
 ### About this Project
 
-The roller skating community is connected by the common interest in finding different ways to move on roller skates.  This application taps into the roller skating community's practice of sharing things they've learned to do on their skates, and looking for new challenges and ways to increase skill.
+The roller skating community is connected by the common interest in finding different ways to move on roller skates.  This application taps into the roller skating community's practice of sharing things they've learned to do on their skates, as well as provides an avenue to discover new challenges and ways to increase their skills.
 
 **The Roller Skate Trick Library** is a community-driven collection of tricks people can do on roller skates.  Contributors are able to add, edit, and delete their contributions. The library includes a profiles feature where contributors can share the library tricks they have accomplished.  Contributors can also share information about their roller skates.
 
@@ -18,6 +18,13 @@ The library itself can be viewed as a guest to the site. In order to contribute 
 - JavaScript
 - OAuth -Google
 - Bootstrap
+
+### Planning Materials
+Original Wireframe
+![wireframe](https://live.staticflickr.com/65535/52408904777_4a7bebe0d3_b.jpg)
+
+ERD
+![ERD](https://live.staticflickr.com/65535/52408904762_78f54455f2_b.jpg)
 
 ### Design
 
