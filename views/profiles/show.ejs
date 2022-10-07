@@ -6,11 +6,7 @@
   <div id="profile-header">
     <h1> Hey <%= isSelf ? "Skater" : profile.name %></h1>
     <div>
-      <img
-        class="profile-avatar"
-        src="<%= profile.avatar %>" 
-        alt="<%= profile.name %>'s avatar"
-      >
+      <img class="profile-avatar" src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
     </div>
   </div>
   <div class ="add-skates">
@@ -25,52 +21,45 @@
           Wheels:
           <input type="text" name="wheels" autocomplete="off">
         </label>
-      <label>
-        Other Cool Info: <br>
-        <textarea type="text" name="other" placeholder="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off"></textarea>
-      </label>
+        <label>
+          Other Cool Info: 
+          <br>
+          <textarea type="text" name="other" placeholder="ie: grind blocks, jam plugs, laces from a friend, etc" autocomplete="off"></textarea>
+        </label>
       <button type="submit"> Share My Skates </button>
     </form>
   <% } %>
   </div>
   <section class="skate-container">
   <% if (profile.skates.length) { %>
-    <h2>
-      <%= isSelf ? "Your" : `${profile.name}'s` %> Skates: 
-    </h2>
+    <h2> <%= isSelf ? "Your" : `${profile.name}'s` %> Skates:</h2>
     <% profile.skates.forEach(skate => { %>
       <div class="show">
-      <ul>
-        <li> Boots: <%= skate.boots %> </li>
-        <li> Wheels: <%= skate.wheels %> </li>
-        <li> Other Cool Stuff: <%= skate.other %> </li>
-      </ul>  
+        <ul>
+          <li> Boots: <%= skate.boots %> </li>
+          <li> Wheels: <%= skate.wheels %> </li>
+          <li> Other Cool Stuff: <%= skate.other %> </li>
+        </ul>  
         <% if (isSelf) { %>
-          <form 
-            action="/profiles/skates/<%= skate._id %>?_method=DELETE"
-            method="POST"
-            style="display: inline-block;"
-          >
+          <form action="/profiles/skates/<%= skate._id %>?_method=DELETE" method="POST" style="display: inline-block;">
             <button type="submit">Remove</button>
           </form>
         <% } %>
       </div>
     <% }) %>
   <% } %>
-</section>
-<section class="unlocked-container">
+  </section>
+  <section class="unlocked-container">
   <% if (profile.unlocked.length) { %>
-    <h2>
-      Tricks Unlocked
-    </h2>
+    <h2>Tricks Unlocked</h2>
     <div class="show">
     <% profile.unlocked.forEach(item => { %>
       <ul>
         <li> <%= item.name %> </li>
       </ul>
     <% }) %>
-  </div>
+    </div>
   <% } %>
-</section>
+  </section>
 </main>
   <%- include('../partials/footer') %>

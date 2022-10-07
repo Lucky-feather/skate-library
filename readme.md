@@ -17,7 +17,6 @@ The library itself can be viewed as a guest to the site. In order to contribute 
 - HTML | CSS
 - JavaScript
 - OAuth -Google
-- Bootstrap
 
 ### Planning Materials
 Original Wireframe

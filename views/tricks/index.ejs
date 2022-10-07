@@ -1,28 +1,27 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/tricks/index.css">
+<%- include('../partials/nav') %>
+
 <main>
-<div id="library-index">
-<section class="primary-section">
-  <h1>Roller Skate <br> Trick Library</h1>
-  <h4>Click on the trick for description</h4>
-	<ul>
-  <% tricks.forEach(trick => { %>
-    <li>
-      <a href="/tricks/<%= trick._id %>"> <%= trick.name %> 
-    </a> 
-  </li>
-  <% }) %>
-  </ul>
-  
-</section>
-<% if (user) { %>
-  <section>
-  <a href="tricks/new">
-  <button class="btn">Add a New Trick</button>
-</section>
-</div>
-<% } %>
+  <div id="library-index">
+    <section class="primary-section">
+      <h1>Roller Skate <br> Trick Library</h1>
+      <h4>Click on the trick for description</h4>
+      <ul>
+      <% tricks.forEach(trick => { %>
+        <li>
+          <a href="/tricks/<%= trick._id %>"> <%= trick.name %> </a> 
+        </li>
+      <% }) %>
+      </ul>
+      </section>
+      <% if (user) { %>
+      <section>
+      <a href="tricks/new">
+      <button class="btn">Add a New Trick</button>
+    </section>
+  </div>
+  <% } %>
 
 </main>
 

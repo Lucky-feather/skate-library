@@ -1,17 +1,12 @@
 import { Profile } from '../models/profile.js'
-import { Trick } from '../models/trick.js'
 
 function index(req, res) {
-  // Make the query object to use with Profile.find based on
-  // whether the user has submitted the search form or not
   let modelQuery = req.query.name
-    ? { name: new RegExp(req.query.name, 'i') }
-    : {}
-  // Sorting by name
+  ? { name: new RegExp(req.query.name, 'i') }
+  : {}
   Profile.find(modelQuery)
   .sort("name")
   .then(profiles => {
-    // Passing profiles and name, for use in the EJS
     res.render("profiles/index", { 
       profiles, 
       name: req.query.name,
@@ -74,7 +69,6 @@ function deleteSkates(req, res) {
 }
 
 function addUnlocked(req, res) {
-
   console.log(req.params, 'params', req.body, 'body')
   Profile.findById(req.params.id)
   .then(profile => {

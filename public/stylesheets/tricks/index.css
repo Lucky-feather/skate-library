@@ -30,7 +30,6 @@ main {
   opacity: 90%;
   font-family: 'PT Serif', serif;
   text-align: center;
-
 }
 
 nav {
@@ -50,7 +49,6 @@ h1 {
   font-family: 'Fredericka the Great', cursive;
   display: flex;
   align-items: center;
-
 }
 
 ul {
@@ -60,12 +58,13 @@ ul {
   background-color: #323031;
   opacity: 100%;
 }
-li:hover {
-  color: #FBB13C;
-}
 
 li {
   font-size: 25px;
+}
+
+li:hover {
+  color: #FBB13C;
 }
 
 button {

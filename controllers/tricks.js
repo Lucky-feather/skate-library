@@ -1,4 +1,3 @@
-import { Profile } from "../models/profile.js"
 import { Trick } from "../models/trick.js"
 
 function index(req, res) {
@@ -56,13 +55,13 @@ function show(req, res) {
 
 function deleteTrick(req, res) {
   Trick.findByIdAndDelete(req.params.id)
-    .then (deletedTrick => {
-      res.redirect('/tricks')
-      })
-      .catch(err => {
-        console.log(err)
-        res.redirect('/')
-      })
+  .then (deletedTrick => {
+    res.redirect('/tricks')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function edit(req, res) {
