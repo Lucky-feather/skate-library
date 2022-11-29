@@ -21,6 +21,28 @@ main {
   align-items: center;
 }
 
+nav {
+  background-color: #FBB13C;
+  color: #323031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0%;
+  width: 100vw;
+  min-height: 50px;
+}
+
+nav > a {
+  margin: 10px 30px;
+  font-size: 24px, auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-family: 'Fredericka the Great', cursive;
+}
+
 #details { 
   display: flex;
   align-items: left;
@@ -37,6 +59,9 @@ main {
 
 .description {
   padding: 5% 15%;
+  width: 80%;
+  overflow: visible;
+  word-wrap: break-word;
 }
 
 .trick-frame {
@@ -47,7 +72,7 @@ main {
   background-color: #D81159;
   opacity: 95%;
   width: 100%;
-  padding: 5%;
+  padding: 3%;
   font-size: 20px;
 }
 
@@ -64,19 +89,11 @@ main {
   font-size: 15px;
 }
 
-
-nav {
-  background-color: #FBB13C;
-  color: #323031;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  margin: 0%;
-  width: 100vw;
-  min-height: 50px;
+h1 {
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
 }
-
 
 h3 {
   font-size: 20px;
@@ -86,12 +103,6 @@ h3 {
 
 p {
   font-size: 15px;
-}
-
-h1 {
-  font-size: 30px;
-  font-family: 'Fredericka the Great', cursive;
-  text-align: center;
 }
 
 button {
@@ -116,12 +127,3 @@ li:hover {
   color: #FBB13C;
 }
 
-nav > a {
-  margin: 10px 30px;
-  font-size: 24px, auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
-  font-family: 'Fredericka the Great', cursive;
-}

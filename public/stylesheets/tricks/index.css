@@ -67,6 +67,7 @@ li {
   font-size: 15px;
   margin: 5px;
   overflow: hidden;
+  max-width: 150px;
   white-space: nowrap;
   text-overflow: ellipsis;
 
