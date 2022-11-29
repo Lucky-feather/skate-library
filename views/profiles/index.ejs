@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/profiles/index.css">
 <%- include('../partials/nav') %>
 
+<% if (user)  { %>
 <main class="main">
   <div class="card-container">
     <% profiles.forEach(profile => { %>
@@ -16,5 +17,6 @@
     <% }) %>
   </div>
 </main>
+<% } %> 
 
 <%- include('../partials/footer') %>

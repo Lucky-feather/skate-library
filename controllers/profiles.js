@@ -14,12 +14,12 @@ function index(req, res) {
     })
   })
   .catch(err => {
-    if (err) return next(err)
+    console.log(err)
+    res.redirect('/')
   })
 }
 
 function show(req, res) {
-  console.log(req.user)
   Profile.findById(req.params.id)
   .populate("unlocked")
   .then(profile => {
@@ -29,7 +29,6 @@ function show(req, res) {
       title: `${profile.name}'s profile`,
       isSelf,
       profile,
-      
     })
   })
   .catch(err => {
