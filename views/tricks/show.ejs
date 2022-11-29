@@ -5,33 +5,32 @@
 <main>
   <section id="details">
     <container class ="description">
-    <h1><%= trick.name %></h1>
-    <h3><%= trick.description %> </h3>
+      <h1><%= trick.name %></h1>
+      <h3><%= trick.description %> </h3>
     </container>
-
-  <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
+    <p>Trick submitted by: <%= trick.owner ? trick.owner.name : "Unknown" %></p>
   </section>
   <container class ="trick-frame">
-<% if (trick.owner.equals(user?.profile._id)) { %>
-  <section class="update">
-  <a href="/tricks/<%= trick._id %>/edit">
-    <button class="btn">Edit my trick</button>
-  </a>
-  <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
-    <button class="btn">Delete my trick from the Library</button>
-  </form>
-</section>
-  <% } %>
-  <% if (user)  { %>
-<section class="add">
-  <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
-    <input type="hidden" name="trickId" value="<%= trick._id %>">
-    <button class="submit">I did it! </button>
-    <br>
-    Add this trick to the 'Unlocked' list on my profile.
-  </form>
-</section>
-<% } %>
-</container>
+    <% if (trick.owner.equals(user?.profile._id)) { %>
+      <section class="update">
+        <a href="/tricks/<%= trick._id %>/edit">
+        <button class="btn">Edit my trick</button>
+        </a>
+        <form action="/tricks/<%= trick._id %>?_method=DELETE" method="POST">
+          <button class="btn">Delete my trick from the Library</button>
+        </form>
+      </section>
+    <% } %>
+    <% if (user)  { %>
+      <section class="add">
+        <form action="/profiles/<%= user.profile._id %>/unlocked" method="POST">
+          <input type="hidden" name="trickId" value="<%= trick._id %>">
+          <button class="submit">I did it! </button>
+          <br>
+          Add this trick to the 'Unlocked' list on my profile.
+        </form>
+      </section>
+    <% } %>
+  </container>
 </main>
 <%- include('../partials/footer') %>

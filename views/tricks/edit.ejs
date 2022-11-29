@@ -7,9 +7,9 @@
   <section id="new">
     <form id="new-form" action="/tricks/<%= trick._id %>?_method=PUT" method="POST">
       <label for="trick-input">Trick name:</label>
-        <input type="string" name="name" id="trick-input" value="<%= trick.name %>" autocomplete="off">
+      <input type="string" name="name" id="trick-input" value="<%= trick.name %>" autocomplete="off">
       <label for="trick-textarea">Description:</label>
-        <textarea name="description" id="trick-textarea"><%= trick.description %></textarea>
+      <textarea name="description" id="trick-textarea"><%= trick.description %></textarea>
       <button type="submit">Update Trick</button> 
     </form>
   </section>
