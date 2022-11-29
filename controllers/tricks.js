@@ -24,7 +24,6 @@ function newTrick(req, res) {
 function create(req, res) {
   req.body.owner = req.user.profile._id
   if (req.body.description === '') {
-    console.log('NOPE')
     return
   }
   Trick.create(req.body)

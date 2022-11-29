@@ -38,6 +38,9 @@ function show(req, res) {
 }
 
 function createSkates(req, res) {
+  if (req.body === '') {
+    return
+  }
   Profile.findById(req.user.profile._id)
   .then(profile => {
     profile.skates.push(req.body)
