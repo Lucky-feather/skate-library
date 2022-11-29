@@ -10,6 +10,18 @@ body {
   margin: 0;
 }
 
+nav {
+  background-color: #FBB13C;
+  color: #323031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0%;
+  width: 100vw;
+  min-height: 50px;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -32,20 +44,12 @@ main {
   text-align: center;
 }
 
-nav {
-  background-color: #FBB13C;
-  color: #323031;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  margin: 0%;
-  width: 100vw;
-  min-height: 60px;
+.primary-section {
+  padding: 25px;
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Fredericka the Great', cursive;
   display: flex;
   align-items: center;
@@ -54,13 +58,18 @@ h1 {
 ul {
   list-style-type: none;
   text-align: left;
-  font-size: 15px;
+  font-size: 10px;
   background-color: #323031;
   opacity: 100%;
 }
 
 li {
-  font-size: 25px;
+  font-size: 15px;
+  margin: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
 }
 
 li:hover {
