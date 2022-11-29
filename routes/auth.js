@@ -5,15 +5,15 @@ const router = Router()
 
 // Google OAuth login route
 router.post("/google", passport.authenticate("google-one-tap", {
-  failureRedirect: "/profiles",
-  successRedirect: "/profiles",
+  failureRedirect: "/",
+  successRedirect: "/",
 }))
 
 // OAuth logout route
 router.get('/logout', function (req, res, next) {
   req.logout(function(err) {
     if (err) return next(err)
-    res.redirect('/profiles')
+    res.redirect('/')
   })
 })
 
