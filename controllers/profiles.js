@@ -23,7 +23,6 @@ function show(req, res) {
   Profile.findById(req.params.id)
   .populate("unlocked")
   .then(profile => {
-    console.log(profile)
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render('profiles/show', {
       title: `${profile.name}'s profile`,
@@ -38,9 +37,11 @@ function show(req, res) {
 }
 
 function createSkates(req, res) {
+  console.log(req.body)
   if (req.body === '') {
-    return
+    console.log("no skates")
   }
+  else {
   Profile.findById(req.user.profile._id)
   .then(profile => {
     profile.skates.push(req.body)
@@ -49,10 +50,12 @@ function createSkates(req, res) {
       res.redirect(`/profiles/${req.user.profile._id}`)
     })
   })
+
   .catch(err => {
     console.log(err)
     res.redirect(`/profiles/${req.user.profile._id}`)
   })
+}
 }
 
 function deleteSkates(req, res) {
@@ -71,10 +74,8 @@ function deleteSkates(req, res) {
 }
 
 function addUnlocked(req, res) {
-  console.log(req.params, 'params', req.body, 'body')
   Profile.findById(req.params.id)
   .then(profile => {
-    console.log(profile)
     profile.unlocked.push(req.body.trickId) // <== push Obj Id
     profile.save().then( () => { res.redirect(`/profiles/${profile._id}`) })
   })
